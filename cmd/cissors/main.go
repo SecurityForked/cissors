@@ -28,7 +28,7 @@ var (
 
 	titleExtractRegex = regexp.MustCompile(`((\d+\.)*?(\d+))\s([A-Za-z]*)(\s[A-Za-z\:\.,_\-\/\(\)]*?|\s\d{1,5}|\s(?:[0-9]{1,3}\.){3}[0-9]{1,3}(\/\d{1,2})?)*(\.+)?\s\d+\s`)
 	titleCropRegex    = regexp.MustCompile(`\s?\.+\s\d+\s$`)
-	titleIDRegex      = regexp.MustCompile(`([\d+\.]*\d+)\s([\w\s-\.\/\:]*)(?:\(((Automated|Manual|(?:Not\s)?Scored))\))?`)
+	titleIDRegex      = regexp.MustCompile(`([\d+\.]*\d+)\s([\w\s-\.\/\:\,]*)(?:\(((Automated|Manual|(?:Not\s)?Scored))\))?`)
 	whitespace        = regexp.MustCompile(`\s+`)
 
 	sectionRegex = regexp.MustCompile(
