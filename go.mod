@@ -1,4 +1,4 @@
-module github.com/DataDog/cissors
+module github.com/SecurityForked/cissors
 
 go 1.14
 
