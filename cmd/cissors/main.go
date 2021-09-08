@@ -26,7 +26,7 @@ var (
 var (
 	pageMarkerRegex = regexp.MustCompile(`^([\d]+\s+\|\s+Page)`)
 
-	titleExtractRegex = regexp.MustCompile(`((\d+\.)*?(\d+))\s([A-Za-z\(\)]*)(\s[A-Za-z\:\.,_\-\/\(\)']*?|\s\d{1,5}|\s(?:[0-9]{1,3}\.){3}[0-9]{1,3}(\/\d{1,2})?)*(\.+)?\s\d+\s`)
+	titleExtractRegex = regexp.MustCompile(`((\d+\.)*?(\d+))\s([A-Za-z\(\)\d]*)(\s[A-Za-z\d\:\.,_\-\/\(\)']*?|\s\d{1,5}|\s(?:[0-9]{1,3}\.){3}[0-9]{1,3}(\/\d{1,2})?)*(\.+)?\s\d+\s`)
 	titleCropRegex    = regexp.MustCompile(`\s?\.+\s\d+\s$`)
 	titleIDRegex      = regexp.MustCompile(`([\d+\.]*\d+)\s([\w\s-\.\/\:\,]*)(?:\(((Automated|Manual|(?:Not\s)?Scored))\))?`)
 	whitespace        = regexp.MustCompile(`\s+`)
@@ -35,7 +35,7 @@ var (
 		`((Profile Applicability|Description|Rationale|Audit|Remediation|Impact|Default\sValue|References|CIS\sControls)\:\s+)`,
 	)
 
-	ruleTitleExtractRegex = regexp.MustCompile(`((\d+\.)*?(\d+))\s([A-Za-z\(\)]*)(\s[A-Za-z\:\.,_\-\/\(\)']*?|\d{1,5}|(?:[0-9]{1,3}\.){3}[0-9]{1,3}(\/\d{1,2})?)*\((Automated|Manual|(Not\s)?Scored)\)`)
+	ruleTitleExtractRegex = regexp.MustCompile(`((\d+\.)*?(\d+))\s([A-Za-z\(\)\d]*)(\s[A-Za-z\d\:\.,_\-\/\(\)']*?|\d{1,5}|(?:[0-9]{1,3}\.){3}[0-9]{1,3}(\/\d{1,2})?)*\((Automated|Manual|(Not\s)?Scored)\)`)
 
 	nonASCIIRegex = regexp.MustCompile(`[[:^ascii:]]`)
 )
